@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+var r       = require("ramda");
+var fs      = require("fs");
+var recast  = require("recast");
+var program = require("commander");
+
+var filterProps = r.curry(function(props, obj) {
+    if (!r.is(Object, obj)) return obj;
+    if (r.head(props) === "") return obj;
+    if (r.isEmpty(props)) return obj;
+    
+    obj = r.omit(props, obj);
+    return r.mapObj(filterProps(props), obj);
+});
+
+program
+    .option("-f --filter [properties]", "Filter properties (comma separated)")
+    .parse(process.argv);
+
+var source             = fs.readFileSync(program.args[0], "utf8");
+var ast                = recast.parse(source);
+var filteredProperties = (program.filter || "").split(",");
+var output             = filterProps(filteredProperties, ast);
+
+console.log(JSON.stringify(output, null, 4));

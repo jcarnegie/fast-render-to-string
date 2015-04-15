@@ -1,0 +1,202 @@
+{
+    "program": {
+        "type": "Program",
+        "body": {
+            "0": {
+                "type": "VariableDeclaration",
+                "declarations": {
+                    "0": {
+                        "type": "VariableDeclarator",
+                        "id": {
+                            "type": "Identifier",
+                            "name": "React"
+                        },
+                        "init": {
+                            "type": "CallExpression",
+                            "callee": {
+                                "type": "Identifier",
+                                "name": "require"
+                            },
+                            "arguments": {
+                                "0": {
+                                    "type": "Literal",
+                                    "value": "react",
+                                    "raw": "\"react\""
+                                }
+                            }
+                        }
+                    }
+                },
+                "kind": "var",
+                "comments": {
+                    "0": {
+                        "type": "Block",
+                        "value": "*\n * @jsx React.DOM\n ",
+                        "leading": true,
+                        "trailing": false
+                    }
+                }
+            },
+            "1": {
+                "type": "VariableDeclaration",
+                "declarations": {
+                    "0": {
+                        "type": "VariableDeclarator",
+                        "id": {
+                            "type": "Identifier",
+                            "name": "Simple"
+                        },
+                        "init": {
+                            "type": "Literal",
+                            "value": "",
+                            "raw": "null"
+                        }
+                    }
+                },
+                "kind": "var"
+            },
+            "2": {
+                "type": "ExpressionStatement",
+                "expression": {
+                    "type": "AssignmentExpression",
+                    "operator": "=",
+                    "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                            "type": "Identifier",
+                            "name": "module"
+                        },
+                        "property": {
+                            "type": "Identifier",
+                            "name": "exports"
+                        }
+                    },
+                    "right": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                            "type": "Identifier",
+                            "name": "Simple"
+                        },
+                        "right": {
+                            "type": "CallExpression",
+                            "callee": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                    "type": "Identifier",
+                                    "name": "React"
+                                },
+                                "property": {
+                                    "type": "Identifier",
+                                    "name": "createClass"
+                                }
+                            },
+                            "arguments": {
+                                "0": {
+                                    "type": "ObjectExpression",
+                                    "properties": {
+                                        "0": {
+                                            "type": "Property",
+                                            "key": {
+                                                "type": "Identifier",
+                                                "name": "displayName"
+                                            },
+                                            "value": {
+                                                "type": "Literal",
+                                                "value": "Simple",
+                                                "raw": "\"Simple\""
+                                            },
+                                            "kind": "init",
+                                            "method": false,
+                                            "shorthand": false,
+                                            "computed": false
+                                        },
+                                        "1": {
+                                            "type": "Property",
+                                            "key": {
+                                                "type": "Identifier",
+                                                "name": "render"
+                                            },
+                                            "value": {
+                                                "type": "FunctionExpression",
+                                                "id": "",
+                                                "params": {},
+                                                "defaults": {},
+                                                "body": {
+                                                    "type": "BlockStatement",
+                                                    "body": {
+                                                        "0": {
+                                                            "type": "ReturnStatement",
+                                                            "argument": {
+                                                                "type": "CallExpression",
+                                                                "callee": {
+                                                                    "type": "MemberExpression",
+                                                                    "computed": false,
+                                                                    "object": {
+                                                                        "type": "Identifier",
+                                                                        "name": "React"
+                                                                    },
+                                                                    "property": {
+                                                                        "type": "Identifier",
+                                                                        "name": "createElement"
+                                                                    }
+                                                                },
+                                                                "arguments": {
+                                                                    "0": {
+                                                                        "type": "Literal",
+                                                                        "value": "div",
+                                                                        "raw": "\"div\""
+                                                                    },
+                                                                    "1": {
+                                                                        "type": "Literal",
+                                                                        "value": "",
+                                                                        "raw": "null"
+                                                                    },
+                                                                    "2": {
+                                                                        "type": "MemberExpression",
+                                                                        "computed": false,
+                                                                        "object": {
+                                                                            "type": "MemberExpression",
+                                                                            "computed": false,
+                                                                            "object": {
+                                                                                "type": "ThisExpression"
+                                                                            },
+                                                                            "property": {
+                                                                                "type": "Identifier",
+                                                                                "name": "props"
+                                                                            }
+                                                                        },
+                                                                        "property": {
+                                                                            "type": "Identifier",
+                                                                            "name": "name"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "rest": "",
+                                                "generator": false,
+                                                "expression": false
+                                            },
+                                            "kind": "init",
+                                            "method": false,
+                                            "shorthand": false,
+                                            "computed": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "errors": {}
+    },
+    "type": "File",
+    "comments": null
+}
