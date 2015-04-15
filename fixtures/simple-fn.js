@@ -4,6 +4,6 @@ var renderSimple = function() {
     for(var i = 1; i < arguments.length; i++)
         children[i] = arguments[i];
     return (
-    React.createElement("div", null, this.props.name)
-);
+        React.createElement("div", null, this.props.name)
+    );
 }

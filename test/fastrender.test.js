@@ -1,9 +1,14 @@
 var fs         = require("fs");
 var chai       = require("chai");
 var recast     = require("recast");
+var formatter  = require("esformatter");
 var fastrender = require("../lib/fastrender");
 
 chai.should();
+
+var format = function(code) {
+    return formatter.format(code);
+};
 
 describe("fastrender", function() {
     var ast = null;
@@ -24,7 +29,7 @@ describe("fastrender", function() {
 
     it ("should convert a component to a function", function() {
         var fixture = "./fixtures/simple.js";
-        var fn = fs.readFileSync("./fixtures/simple-fn.js", "utf8");
+        var fn = format(fs.readFileSync("./fixtures/simple-fn.js", "utf8"));
         ast = recast.parse(fs.readFileSync(fixture, "utf8"));
         fastrender.componentFn("Simple", "./fixtures/simple.jsx", ast).should.eql(fn);
     });

@@ -23,6 +23,7 @@
     "commander": "~2.6.0",
     "babel": "~4.7.16",
     "ejs": "~2.3.1",
-    "jsonquerylanguage": "jcarnegie/JQL"
+    "jsonquerylanguage": "jcarnegie/JQL",
+    "esformatter": "~0.6.1"
   }
 }
