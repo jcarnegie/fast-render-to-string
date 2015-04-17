@@ -7,9 +7,9 @@ module.exports = function () {
             { pattern: "templates/*.*js*", instrument: false }
         ],
         tests: ["test/**/*.test.js"],
-        env: { type: "node" },
-        preprocessors: {
-            "**/*.jsx": file => require('babel').transform(file.content, {sourceMap: true})
-        }
+        env: { type: "node" } //,
+        //preprocessors: {
+        //    "**/*.jsx": file => require('babel').transform(file.content, {sourceMap: true})
+        //}
     }
 }
