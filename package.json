@@ -24,6 +24,7 @@
     "babel": "~4.7.16",
     "ejs": "~2.3.1",
     "jsonquerylanguage": "jcarnegie/JQL",
-    "esformatter": "~0.6.1"
+    "esformatter": "~0.6.1",
+    "html-entities": "~1.1.2"
   }
 }
