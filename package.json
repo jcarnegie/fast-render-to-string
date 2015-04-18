@@ -1,10 +1,10 @@
 {
-  "name": "test-test",
-  "version": "0.0.0",
+  "name": "fast-render-to-string",
+  "version": "0.0.1",
   "description": "",
   "main": "lib/fastrender.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test"
   },
   "author": "",
   "license": "ISC",
