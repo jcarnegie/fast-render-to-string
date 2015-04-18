@@ -51,12 +51,10 @@ describe("fastrender", function() {
     });
 
     it ("should insert a component function into the parent ast", function() {
-        var fixture = "./fixtures/simple.js";
-        var fn = format(fs.readFileSync("./fixtures/simple-fn.js", "utf8"));
-        ast = recast.parse(fs.readFileSync(fixture, "utf8"));
-        var compFn = fastrender.componentFn(null, "./fixtures/simple.jsx", "Simple");
+        var fn       = format(fs.readFileSync("./fixtures/simple-fn.js", "utf8"));
+        var compFn   = fastrender.componentFn(null, "./fixtures/simple.jsx", "Simple");
         var expected = format(fs.readFileSync("./fixtures/insert-fn-test.js", "utf8"));
-        ast = recast.parse(fs.readFileSync("./fixtures/simple-with-child.js"));
+        var ast      = recast.parse(fs.readFileSync("./fixtures/simple-with-child.js"));
         var result   = fastrender.insertFn(ast, compFn);
         minify(result).should.eql(minify(expected));
     });
