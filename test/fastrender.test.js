@@ -33,24 +33,34 @@ describe("fastrender", function() {
         console.log(fastrender.matchTest(ast));
     });
 
-    it ("should get the requires", function() {
+    xit ("should get the requires", function() {
         fastrender.requires(ast).should.eql({ React: "react", Simple: "./simple.jsx" });
     });
 
-    it ("should get the components", function() {
+    xit ("should get the components", function() {
         var requires = fastrender.requires(ast);
         fastrender.components(requires, ast).should.eql({ Simple: "./simple.jsx" });
     });
 
-    it ("should convert a component to a function", function() {
-        var fixture = "./fixtures/simple.js";
-        var fn = format(fs.readFileSync("./fixtures/simple-fn.js", "utf8"));
-        ast = recast.parse(fs.readFileSync(fixture, "utf8"));
-        var compFn = fastrender.componentFn(null, "./fixtures/simple.jsx", "Simple");
-        minify(compFn).should.eql(minify(fn));
+    describe("Component Function Transform", function() {
+        it ("should convert a component to a function", function() {
+            var fixture = "./fixtures/simple.js";
+            var fn = format(fs.readFileSync("./fixtures/simple-fn.js", "utf8"));
+            ast = recast.parse(fs.readFileSync(fixture, "utf8"));
+            var compFn = fastrender.componentFn(null, "./fixtures/simple.jsx", "Simple");
+            minify(compFn).should.eql(minify(fn));
+        });
+
+        it ("should handle getInitialProps", function() {
+            var fixture = "./fixtures/simple-props.js";
+            var fn = format(fs.readFileSync("./fixtures/simple-props-fn.js", "utf8"));
+            ast = recast.parse(fs.readFileSync(fixture, "utf8"));
+            var compFn = fastrender.componentFn(null, "./fixtures/simple-props.jsx", "SimpleProps");
+            minify(compFn).should.eql(minify(fn));
+        });
     });
 
-    it ("should insert a component function into the parent ast", function() {
+    xit ("should insert a component function into the parent ast", function() {
         var fn       = format(fs.readFileSync("./fixtures/simple-fn.js", "utf8"));
         var compFn   = fastrender.componentFn(null, "./fixtures/simple.jsx", "Simple");
         var expected = format(fs.readFileSync("./fixtures/insert-fn-test.js", "utf8"));
@@ -59,7 +69,7 @@ describe("fastrender", function() {
         minify(result).should.eql(minify(expected));
     });
 
-    it ("should collapse a component", function() {
+    xit ("should collapse a component", function() {
         var expected = format(fs.readFileSync("./fixtures/simple-with-child-collapsed.js", "utf8"));
         var collapsed = fastrender.collapse("./fixtures/simple-with-child.jsx");
         minify(collapsed).should.eql(minify(expected));
