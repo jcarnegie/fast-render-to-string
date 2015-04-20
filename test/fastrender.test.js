@@ -1,10 +1,21 @@
+// allows us to load jsx/cjsx files for testing purposes
+require("jsx-require-extension");
+require("coffee-react/register");
+
 var fs         = require("fs");
 var pp         = require("../lib/pp");
 var chai       = require("chai");
+var react      = require("react");
 var recast     = require("recast");
+var uglifyjs   = require("uglify-js");
 var formatter  = require("esformatter");
 var fastrender = require("../lib/fastrender");
-var uglifyjs   = require("uglify-js");
+var htmlminify = require("html-minify");
+//var ReactElement         = require("react/lib/ReactElement");
+var ReactInstanceHandles = require("react/lib/ReactInstanceHandles");
+var ReactMarkupChecksum  = require("react/lib/ReactMarkupChecksum");
+var instantiateReactComponent = require("react/lib/instantiateReactComponent");
+var ReactServerRenderingTransaction = require("react/lib/ReactServerRenderingTransaction");
 
 chai.should();
 
@@ -17,7 +28,29 @@ var minify = function(code) {
         fromString: true,
         output: { beautify: true }
     }).code;
-}
+};
+
+var hminify = function(html) {
+    return htmlminify.minify(html);
+};
+
+var renderComponent = function(modulePath, id, props) {
+    var component = require(modulePath);
+    var element = react.createFactory(component)(props);
+    var transaction;
+    try {
+        if (!id) id = ReactInstanceHandles.createReactRootID();
+        transaction = ReactServerRenderingTransaction.getPooled(false);
+
+        return transaction.perform(function () {
+            var componentInstance = instantiateReactComponent(element, null);
+            var markup = componentInstance.mountComponent(id, transaction, 0);
+            return ReactMarkupChecksum.addChecksumToMarkup(markup);
+        }, null);
+    } finally {
+        ReactServerRenderingTransaction.release(transaction);
+    }
+};
 
 describe("fastrender", function() {
     var ast = null;
@@ -60,7 +93,7 @@ describe("fastrender", function() {
         });
     });
 
-    xit ("should insert a component function into the parent ast", function() {
+    it ("should insert a component function into the parent ast", function() {
         var fn       = format(fs.readFileSync("./fixtures/simple-fn.js", "utf8"));
         var compFn   = fastrender.componentFn(null, "./fixtures/simple.jsx", "Simple");
         var expected = format(fs.readFileSync("./fixtures/insert-fn-test.js", "utf8"));
@@ -69,9 +102,25 @@ describe("fastrender", function() {
         minify(result).should.eql(minify(expected));
     });
 
-    xit ("should collapse a component", function() {
+    it ("should collapse a component", function() {
         var expected = format(fs.readFileSync("./fixtures/simple-with-child-collapsed.js", "utf8"));
         var collapsed = fastrender.collapse("./fixtures/simple-with-child.jsx");
         minify(collapsed).should.eql(minify(expected));
+    });
+
+    describe("Render", function() {
+        it ("should render simple", function() {
+            var renderId = ReactInstanceHandles.createReactRootID();
+            var normal = renderComponent("../fixtures/simple.jsx", renderId);
+            var collapsed = fastrender.render("./fixtures/simple.jsx", null, renderId);
+            hminify(collapsed).should.eql(hminify(normal));
+        });
+
+        it("should render simple with child", function() {
+            var renderId = ReactInstanceHandles.createReactRootID();
+            var normal = renderComponent("../fixtures/simple-with-child.jsx", renderId);
+            var collapsed = fastrender.render("./fixtures/simple-with-child.jsx", null, renderId);
+            hminify(collapsed).should.eql(hminify(normal));
+        });
     });
 });

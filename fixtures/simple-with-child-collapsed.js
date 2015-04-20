@@ -2,15 +2,17 @@
  * @jsx React.DOM
  */
 var React  = require("react");
+var r      = require("ramda");
 
-var renderSimple = function(/* props, children... */) {
+var renderSimple = function( /* props, children... */ ) {
+    this.getInitialProps = function() { return {}; };
     var children = [];
-    this.props = arguments[0] || null;
+    this.props = r.merge(this.getInitialProps(), arguments[0]);
     for(var i = 1; i < arguments.length; i++)
         children[i] = arguments[i];
     return (
-    React.createElement("div", null, this.props.name)
-);
+        React.createElement("div", null, this.props.name)
+    );
 }
 
 var SimpleWithChild = React.createClass({

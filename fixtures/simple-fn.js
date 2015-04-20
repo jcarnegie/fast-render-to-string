@@ -1,5 +1,5 @@
 var renderSimple = function( /* props, children... */ ) {
-    this.getInitialProps = null;
+    this.getInitialProps = function() { return {}; };
     var children = [];
     this.props = r.merge(this.getInitialProps(), arguments[0]);
     for(var i = 1; i < arguments.length; i++)
