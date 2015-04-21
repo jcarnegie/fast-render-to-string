@@ -1,0 +1,1000 @@
+{
+    "program": {
+        "type": "Program",
+        "body": [
+            {
+                "type": "VariableDeclaration",
+                "declarations": [
+                    {
+                        "type": "VariableDeclarator",
+                        "id": {
+                            "type": "Identifier",
+                            "name": "React",
+                            "loc": {
+                                "start": {
+                                    "line": 5,
+                                    "column": 4
+                                },
+                                "end": {
+                                    "line": 5,
+                                    "column": 9
+                                },
+                                "lines": {},
+                                "indent": 0
+                            }
+                        },
+                        "init": {
+                            "type": "CallExpression",
+                            "callee": {
+                                "type": "Identifier",
+                                "name": "require",
+                                "loc": {
+                                    "start": {
+                                        "line": 5,
+                                        "column": 12
+                                    },
+                                    "end": {
+                                        "line": 5,
+                                        "column": 19
+                                    },
+                                    "lines": {},
+                                    "indent": 0
+                                }
+                            },
+                            "arguments": [
+                                {
+                                    "type": "Literal",
+                                    "value": "react",
+                                    "raw": "\"react\"",
+                                    "loc": {
+                                        "start": {
+                                            "line": 5,
+                                            "column": 20
+                                        },
+                                        "end": {
+                                            "line": 5,
+                                            "column": 27
+                                        },
+                                        "lines": {},
+                                        "indent": 0
+                                    }
+                                }
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 5,
+                                    "column": 12
+                                },
+                                "end": {
+                                    "line": 5,
+                                    "column": 28
+                                },
+                                "lines": {},
+                                "indent": 0
+                            }
+                        },
+                        "loc": {
+                            "start": {
+                                "line": 5,
+                                "column": 4
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 28
+                            },
+                            "lines": {},
+                            "indent": 0
+                        }
+                    }
+                ],
+                "kind": "var",
+                "loc": {
+                    "start": {
+                        "line": 5,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 5,
+                        "column": 29
+                    },
+                    "lines": {},
+                    "indent": 0
+                },
+                "comments": [
+                    {
+                        "type": "Block",
+                        "value": "*\n * @jsx React.DOM\n ",
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 0
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 3
+                            },
+                            "lines": {},
+                            "indent": 0
+                        },
+                        "leading": true,
+                        "trailing": false
+                    }
+                ]
+            },
+            {
+                "type": "VariableDeclaration",
+                "declarations": [
+                    {
+                        "type": "VariableDeclarator",
+                        "id": {
+                            "type": "Identifier",
+                            "name": "SimpleState",
+                            "loc": {
+                                "start": {
+                                    "line": 6,
+                                    "column": 4
+                                },
+                                "end": {
+                                    "line": 6,
+                                    "column": 15
+                                },
+                                "lines": {},
+                                "indent": 0
+                            }
+                        },
+                        "init": {
+                            "type": "Literal",
+                            "value": null,
+                            "raw": "null",
+                            "loc": {
+                                "start": {
+                                    "line": 6,
+                                    "column": 18
+                                },
+                                "end": {
+                                    "line": 6,
+                                    "column": 22
+                                },
+                                "lines": {},
+                                "indent": 0
+                            }
+                        },
+                        "loc": {
+                            "start": {
+                                "line": 6,
+                                "column": 4
+                            },
+                            "end": {
+                                "line": 6,
+                                "column": 22
+                            },
+                            "lines": {},
+                            "indent": 0
+                        }
+                    }
+                ],
+                "kind": "var",
+                "loc": {
+                    "start": {
+                        "line": 6,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 6,
+                        "column": 23
+                    },
+                    "lines": {},
+                    "indent": 0
+                }
+            },
+            {
+                "type": "ExpressionStatement",
+                "expression": {
+                    "type": "AssignmentExpression",
+                    "operator": "=",
+                    "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                            "type": "Identifier",
+                            "name": "module",
+                            "loc": {
+                                "start": {
+                                    "line": 8,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "line": 8,
+                                    "column": 6
+                                },
+                                "lines": {},
+                                "indent": 0
+                            }
+                        },
+                        "property": {
+                            "type": "Identifier",
+                            "name": "exports",
+                            "loc": {
+                                "start": {
+                                    "line": 8,
+                                    "column": 7
+                                },
+                                "end": {
+                                    "line": 8,
+                                    "column": 14
+                                },
+                                "lines": {},
+                                "indent": 0
+                            }
+                        },
+                        "loc": {
+                            "start": {
+                                "line": 8,
+                                "column": 0
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 14
+                            },
+                            "lines": {},
+                            "indent": 0
+                        }
+                    },
+                    "right": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                            "type": "Identifier",
+                            "name": "SimpleState",
+                            "loc": {
+                                "start": {
+                                    "line": 8,
+                                    "column": 17
+                                },
+                                "end": {
+                                    "line": 8,
+                                    "column": 28
+                                },
+                                "lines": {},
+                                "indent": 0
+                            }
+                        },
+                        "right": {
+                            "type": "CallExpression",
+                            "callee": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                    "type": "Identifier",
+                                    "name": "React",
+                                    "loc": {
+                                        "start": {
+                                            "line": 8,
+                                            "column": 31
+                                        },
+                                        "end": {
+                                            "line": 8,
+                                            "column": 36
+                                        },
+                                        "lines": {},
+                                        "indent": 0
+                                    }
+                                },
+                                "property": {
+                                    "type": "Identifier",
+                                    "name": "createClass",
+                                    "loc": {
+                                        "start": {
+                                            "line": 8,
+                                            "column": 37
+                                        },
+                                        "end": {
+                                            "line": 8,
+                                            "column": 48
+                                        },
+                                        "lines": {},
+                                        "indent": 0
+                                    }
+                                },
+                                "loc": {
+                                    "start": {
+                                        "line": 8,
+                                        "column": 31
+                                    },
+                                    "end": {
+                                        "line": 8,
+                                        "column": 48
+                                    },
+                                    "lines": {},
+                                    "indent": 0
+                                }
+                            },
+                            "arguments": [
+                                {
+                                    "type": "ObjectExpression",
+                                    "properties": [
+                                        {
+                                            "type": "Property",
+                                            "key": {
+                                                "type": "Identifier",
+                                                "name": "displayName",
+                                                "loc": {
+                                                    "start": {
+                                                        "line": 8,
+                                                        "column": 50
+                                                    },
+                                                    "end": {
+                                                        "line": 8,
+                                                        "column": 61
+                                                    },
+                                                    "lines": {},
+                                                    "indent": 0
+                                                }
+                                            },
+                                            "value": {
+                                                "type": "Literal",
+                                                "value": "SimpleState",
+                                                "raw": "\"SimpleState\"",
+                                                "loc": {
+                                                    "start": {
+                                                        "line": 8,
+                                                        "column": 63
+                                                    },
+                                                    "end": {
+                                                        "line": 8,
+                                                        "column": 76
+                                                    },
+                                                    "lines": {},
+                                                    "indent": 0
+                                                }
+                                            },
+                                            "kind": "init",
+                                            "method": false,
+                                            "shorthand": false,
+                                            "computed": false,
+                                            "loc": {
+                                                "start": {
+                                                    "line": 8,
+                                                    "column": 50
+                                                },
+                                                "end": {
+                                                    "line": 8,
+                                                    "column": 76
+                                                },
+                                                "lines": {},
+                                                "indent": 0
+                                            }
+                                        },
+                                        {
+                                            "type": "Property",
+                                            "key": {
+                                                "type": "Identifier",
+                                                "name": "getInitialState",
+                                                "loc": {
+                                                    "start": {
+                                                        "line": 9,
+                                                        "column": 4
+                                                    },
+                                                    "end": {
+                                                        "line": 9,
+                                                        "column": 19
+                                                    },
+                                                    "lines": {},
+                                                    "indent": 4
+                                                }
+                                            },
+                                            "value": {
+                                                "type": "FunctionExpression",
+                                                "id": null,
+                                                "params": [],
+                                                "defaults": [],
+                                                "body": {
+                                                    "type": "BlockStatement",
+                                                    "body": [
+                                                        {
+                                                            "type": "ReturnStatement",
+                                                            "argument": {
+                                                                "type": "ObjectExpression",
+                                                                "properties": [
+                                                                    {
+                                                                        "type": "Property",
+                                                                        "key": {
+                                                                            "type": "Identifier",
+                                                                            "name": "greeting",
+                                                                            "loc": {
+                                                                                "start": {
+                                                                                    "line": 11,
+                                                                                    "column": 12
+                                                                                },
+                                                                                "end": {
+                                                                                    "line": 11,
+                                                                                    "column": 20
+                                                                                },
+                                                                                "lines": {},
+                                                                                "indent": 12
+                                                                            }
+                                                                        },
+                                                                        "value": {
+                                                                            "type": "Literal",
+                                                                            "value": "hi, ",
+                                                                            "raw": "\"hi, \"",
+                                                                            "loc": {
+                                                                                "start": {
+                                                                                    "line": 11,
+                                                                                    "column": 22
+                                                                                },
+                                                                                "end": {
+                                                                                    "line": 11,
+                                                                                    "column": 28
+                                                                                },
+                                                                                "lines": {},
+                                                                                "indent": 12
+                                                                            }
+                                                                        },
+                                                                        "kind": "init",
+                                                                        "method": false,
+                                                                        "shorthand": false,
+                                                                        "computed": false,
+                                                                        "loc": {
+                                                                            "start": {
+                                                                                "line": 11,
+                                                                                "column": 12
+                                                                            },
+                                                                            "end": {
+                                                                                "line": 11,
+                                                                                "column": 28
+                                                                            },
+                                                                            "lines": {},
+                                                                            "indent": 12
+                                                                        }
+                                                                    }
+                                                                ],
+                                                                "loc": {
+                                                                    "start": {
+                                                                        "line": 10,
+                                                                        "column": 15
+                                                                    },
+                                                                    "end": {
+                                                                        "line": 12,
+                                                                        "column": 9
+                                                                    },
+                                                                    "lines": {},
+                                                                    "indent": 8
+                                                                }
+                                                            },
+                                                            "loc": {
+                                                                "start": {
+                                                                    "line": 10,
+                                                                    "column": 8
+                                                                },
+                                                                "end": {
+                                                                    "line": 12,
+                                                                    "column": 9
+                                                                },
+                                                                "lines": {},
+                                                                "indent": 8
+                                                            }
+                                                        }
+                                                    ],
+                                                    "loc": {
+                                                        "start": {
+                                                            "line": 9,
+                                                            "column": 32
+                                                        },
+                                                        "end": {
+                                                            "line": 13,
+                                                            "column": 5
+                                                        },
+                                                        "lines": {},
+                                                        "indent": 4
+                                                    }
+                                                },
+                                                "rest": null,
+                                                "generator": false,
+                                                "expression": false,
+                                                "loc": {
+                                                    "start": {
+                                                        "line": 9,
+                                                        "column": 21
+                                                    },
+                                                    "end": {
+                                                        "line": 13,
+                                                        "column": 5
+                                                    },
+                                                    "lines": {},
+                                                    "indent": 4
+                                                }
+                                            },
+                                            "kind": "init",
+                                            "method": false,
+                                            "shorthand": false,
+                                            "computed": false,
+                                            "loc": {
+                                                "start": {
+                                                    "line": 9,
+                                                    "column": 4
+                                                },
+                                                "end": {
+                                                    "line": 13,
+                                                    "column": 5
+                                                },
+                                                "lines": {},
+                                                "indent": 4
+                                            }
+                                        },
+                                        {
+                                            "type": "Property",
+                                            "key": {
+                                                "type": "Identifier",
+                                                "name": "render",
+                                                "loc": {
+                                                    "start": {
+                                                        "line": 15,
+                                                        "column": 4
+                                                    },
+                                                    "end": {
+                                                        "line": 15,
+                                                        "column": 10
+                                                    },
+                                                    "lines": {},
+                                                    "indent": 4
+                                                }
+                                            },
+                                            "value": {
+                                                "type": "FunctionExpression",
+                                                "id": null,
+                                                "params": [],
+                                                "defaults": [],
+                                                "body": {
+                                                    "type": "BlockStatement",
+                                                    "body": [
+                                                        {
+                                                            "type": "ReturnStatement",
+                                                            "argument": {
+                                                                "type": "CallExpression",
+                                                                "callee": {
+                                                                    "type": "MemberExpression",
+                                                                    "computed": false,
+                                                                    "object": {
+                                                                        "type": "Identifier",
+                                                                        "name": "React",
+                                                                        "loc": {
+                                                                            "start": {
+                                                                                "line": 17,
+                                                                                "column": 12
+                                                                            },
+                                                                            "end": {
+                                                                                "line": 17,
+                                                                                "column": 17
+                                                                            },
+                                                                            "lines": {},
+                                                                            "indent": 12
+                                                                        }
+                                                                    },
+                                                                    "property": {
+                                                                        "type": "Identifier",
+                                                                        "name": "createElement",
+                                                                        "loc": {
+                                                                            "start": {
+                                                                                "line": 17,
+                                                                                "column": 18
+                                                                            },
+                                                                            "end": {
+                                                                                "line": 17,
+                                                                                "column": 31
+                                                                            },
+                                                                            "lines": {},
+                                                                            "indent": 12
+                                                                        }
+                                                                    },
+                                                                    "loc": {
+                                                                        "start": {
+                                                                            "line": 17,
+                                                                            "column": 12
+                                                                        },
+                                                                        "end": {
+                                                                            "line": 17,
+                                                                            "column": 31
+                                                                        },
+                                                                        "lines": {},
+                                                                        "indent": 12
+                                                                    }
+                                                                },
+                                                                "arguments": [
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "value": "div",
+                                                                        "raw": "\"div\"",
+                                                                        "loc": {
+                                                                            "start": {
+                                                                                "line": 17,
+                                                                                "column": 32
+                                                                            },
+                                                                            "end": {
+                                                                                "line": 17,
+                                                                                "column": 37
+                                                                            },
+                                                                            "lines": {},
+                                                                            "indent": 12
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "value": null,
+                                                                        "raw": "null",
+                                                                        "loc": {
+                                                                            "start": {
+                                                                                "line": 17,
+                                                                                "column": 39
+                                                                            },
+                                                                            "end": {
+                                                                                "line": 17,
+                                                                                "column": 43
+                                                                            },
+                                                                            "lines": {},
+                                                                            "indent": 12
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "type": "MemberExpression",
+                                                                        "computed": false,
+                                                                        "object": {
+                                                                            "type": "MemberExpression",
+                                                                            "computed": false,
+                                                                            "object": {
+                                                                                "type": "ThisExpression",
+                                                                                "loc": {
+                                                                                    "start": {
+                                                                                        "line": 17,
+                                                                                        "column": 45
+                                                                                    },
+                                                                                    "end": {
+                                                                                        "line": 17,
+                                                                                        "column": 49
+                                                                                    },
+                                                                                    "lines": {},
+                                                                                    "indent": 12
+                                                                                }
+                                                                            },
+                                                                            "property": {
+                                                                                "type": "Identifier",
+                                                                                "name": "state",
+                                                                                "loc": {
+                                                                                    "start": {
+                                                                                        "line": 17,
+                                                                                        "column": 50
+                                                                                    },
+                                                                                    "end": {
+                                                                                        "line": 17,
+                                                                                        "column": 55
+                                                                                    },
+                                                                                    "lines": {},
+                                                                                    "indent": 12
+                                                                                }
+                                                                            },
+                                                                            "loc": {
+                                                                                "start": {
+                                                                                    "line": 17,
+                                                                                    "column": 45
+                                                                                },
+                                                                                "end": {
+                                                                                    "line": 17,
+                                                                                    "column": 55
+                                                                                },
+                                                                                "lines": {},
+                                                                                "indent": 12
+                                                                            }
+                                                                        },
+                                                                        "property": {
+                                                                            "type": "Identifier",
+                                                                            "name": "greeting",
+                                                                            "loc": {
+                                                                                "start": {
+                                                                                    "line": 17,
+                                                                                    "column": 56
+                                                                                },
+                                                                                "end": {
+                                                                                    "line": 17,
+                                                                                    "column": 64
+                                                                                },
+                                                                                "lines": {},
+                                                                                "indent": 12
+                                                                            }
+                                                                        },
+                                                                        "loc": {
+                                                                            "start": {
+                                                                                "line": 17,
+                                                                                "column": 45
+                                                                            },
+                                                                            "end": {
+                                                                                "line": 17,
+                                                                                "column": 64
+                                                                            },
+                                                                            "lines": {},
+                                                                            "indent": 12
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "value": ", ",
+                                                                        "raw": "\", \"",
+                                                                        "loc": {
+                                                                            "start": {
+                                                                                "line": 17,
+                                                                                "column": 66
+                                                                            },
+                                                                            "end": {
+                                                                                "line": 17,
+                                                                                "column": 70
+                                                                            },
+                                                                            "lines": {},
+                                                                            "indent": 12
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "type": "MemberExpression",
+                                                                        "computed": false,
+                                                                        "object": {
+                                                                            "type": "MemberExpression",
+                                                                            "computed": false,
+                                                                            "object": {
+                                                                                "type": "ThisExpression",
+                                                                                "loc": {
+                                                                                    "start": {
+                                                                                        "line": 17,
+                                                                                        "column": 72
+                                                                                    },
+                                                                                    "end": {
+                                                                                        "line": 17,
+                                                                                        "column": 76
+                                                                                    },
+                                                                                    "lines": {},
+                                                                                    "indent": 12
+                                                                                }
+                                                                            },
+                                                                            "property": {
+                                                                                "type": "Identifier",
+                                                                                "name": "props",
+                                                                                "loc": {
+                                                                                    "start": {
+                                                                                        "line": 17,
+                                                                                        "column": 77
+                                                                                    },
+                                                                                    "end": {
+                                                                                        "line": 17,
+                                                                                        "column": 82
+                                                                                    },
+                                                                                    "lines": {},
+                                                                                    "indent": 12
+                                                                                }
+                                                                            },
+                                                                            "loc": {
+                                                                                "start": {
+                                                                                    "line": 17,
+                                                                                    "column": 72
+                                                                                },
+                                                                                "end": {
+                                                                                    "line": 17,
+                                                                                    "column": 82
+                                                                                },
+                                                                                "lines": {},
+                                                                                "indent": 12
+                                                                            }
+                                                                        },
+                                                                        "property": {
+                                                                            "type": "Identifier",
+                                                                            "name": "name",
+                                                                            "loc": {
+                                                                                "start": {
+                                                                                    "line": 17,
+                                                                                    "column": 83
+                                                                                },
+                                                                                "end": {
+                                                                                    "line": 17,
+                                                                                    "column": 87
+                                                                                },
+                                                                                "lines": {},
+                                                                                "indent": 12
+                                                                            }
+                                                                        },
+                                                                        "loc": {
+                                                                            "start": {
+                                                                                "line": 17,
+                                                                                "column": 72
+                                                                            },
+                                                                            "end": {
+                                                                                "line": 17,
+                                                                                "column": 87
+                                                                            },
+                                                                            "lines": {},
+                                                                            "indent": 12
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "value": "!",
+                                                                        "raw": "\"!\"",
+                                                                        "loc": {
+                                                                            "start": {
+                                                                                "line": 17,
+                                                                                "column": 89
+                                                                            },
+                                                                            "end": {
+                                                                                "line": 17,
+                                                                                "column": 92
+                                                                            },
+                                                                            "lines": {},
+                                                                            "indent": 12
+                                                                        }
+                                                                    }
+                                                                ],
+                                                                "loc": {
+                                                                    "start": {
+                                                                        "line": 17,
+                                                                        "column": 12
+                                                                    },
+                                                                    "end": {
+                                                                        "line": 17,
+                                                                        "column": 93
+                                                                    },
+                                                                    "lines": {},
+                                                                    "indent": 12
+                                                                }
+                                                            },
+                                                            "loc": {
+                                                                "start": {
+                                                                    "line": 16,
+                                                                    "column": 8
+                                                                },
+                                                                "end": {
+                                                                    "line": 18,
+                                                                    "column": 10
+                                                                },
+                                                                "lines": {},
+                                                                "indent": 8
+                                                            }
+                                                        }
+                                                    ],
+                                                    "loc": {
+                                                        "start": {
+                                                            "line": 15,
+                                                            "column": 23
+                                                        },
+                                                        "end": {
+                                                            "line": 19,
+                                                            "column": 5
+                                                        },
+                                                        "lines": {},
+                                                        "indent": 4
+                                                    }
+                                                },
+                                                "rest": null,
+                                                "generator": false,
+                                                "expression": false,
+                                                "loc": {
+                                                    "start": {
+                                                        "line": 15,
+                                                        "column": 12
+                                                    },
+                                                    "end": {
+                                                        "line": 19,
+                                                        "column": 5
+                                                    },
+                                                    "lines": {},
+                                                    "indent": 4
+                                                }
+                                            },
+                                            "kind": "init",
+                                            "method": false,
+                                            "shorthand": false,
+                                            "computed": false,
+                                            "loc": {
+                                                "start": {
+                                                    "line": 15,
+                                                    "column": 4
+                                                },
+                                                "end": {
+                                                    "line": 19,
+                                                    "column": 5
+                                                },
+                                                "lines": {},
+                                                "indent": 4
+                                            }
+                                        }
+                                    ],
+                                    "loc": {
+                                        "start": {
+                                            "line": 8,
+                                            "column": 49
+                                        },
+                                        "end": {
+                                            "line": 20,
+                                            "column": 1
+                                        },
+                                        "lines": {},
+                                        "indent": 0
+                                    }
+                                }
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 8,
+                                    "column": 31
+                                },
+                                "end": {
+                                    "line": 20,
+                                    "column": 2
+                                },
+                                "lines": {},
+                                "indent": 0
+                            }
+                        },
+                        "loc": {
+                            "start": {
+                                "line": 8,
+                                "column": 17
+                            },
+                            "end": {
+                                "line": 20,
+                                "column": 2
+                            },
+                            "lines": {},
+                            "indent": 0
+                        }
+                    },
+                    "loc": {
+                        "start": {
+                            "line": 8,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 20,
+                            "column": 2
+                        },
+                        "lines": {},
+                        "indent": 0
+                    }
+                },
+                "loc": {
+                    "start": {
+                        "line": 8,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 20,
+                        "column": 3
+                    },
+                    "lines": {},
+                    "indent": 0
+                }
+            }
+        ],
+        "loc": {
+            "lines": {},
+            "start": {
+                "line": 1,
+                "column": 0
+            },
+            "end": {
+                "line": 20,
+                "column": 3
+            },
+            "indent": 0
+        },
+        "errors": []
+    },
+    "loc": {
+        "lines": {},
+        "indent": 0,
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 21,
+            "column": 0
+        }
+    },
+    "type": "File",
+    "comments": null
+}
