@@ -125,7 +125,13 @@ describe("fastrender", function() {
             minify(compFn).should.eql(minify(fn));
         });
 
-        it ("should handle class functions with JSX");
+        it ("should handle class functions with JSX", function() {
+            var fixture = "./fixtures/simple-class-fn-jsx.js";
+            var fn = format(fs.readFileSync("./fixtures/simple-class-fn-jsx-fn.js", "utf8"));
+            ast = recast.parse(fs.readFileSync(fixture, "utf8"));
+            var compFn = fastrender.componentFn(null, "./fixtures/simple-class-fn-jsx.jsx", "SimpleClassJSXFn");
+            minify(compFn).should.eql(minify(fn));
+        });
 
         it ("should handle module global functions");
 
