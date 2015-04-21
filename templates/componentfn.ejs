@@ -1,6 +1,7 @@
 var render<%= componentName %> = function( /* props, children... */ ) {
     this.getInitialProps = <%= getInitialPropsFn %>;
     this.getInitialState = <%= getInitialStateFn %>;
+    <%= reactClassProps %>
     var children = [];
     this.props = r.merge(this.getInitialProps(), arguments[0]);
     this.state = this.getInitialState();

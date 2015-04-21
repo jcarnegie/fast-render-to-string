@@ -114,6 +114,34 @@ describe("fastrender", function() {
             var compFn = fastrender.componentFn(null, "./fixtures/simple-state.jsx", "SimpleState");
             minify(compFn).should.eql(minify(fn));
         });
+
+        it ("should handle componentWillMount (+ this.setState)");
+
+        it ("should handle class functions", function() {
+            var fixture = "./fixtures/simple-class-fn.js";
+            var fn = format(fs.readFileSync("./fixtures/simple-class-fn-fn.js", "utf8"));
+            ast = recast.parse(fs.readFileSync(fixture, "utf8"));
+            var compFn = fastrender.componentFn(null, "./fixtures/simple-class-fn.jsx", "SimpleClassFn");
+            minify(compFn).should.eql(minify(fn));
+        });
+
+        it ("should handle class functions with JSX");
+
+        it ("should handle module global functions");
+
+        it ("should handle functions required from other modules");
+
+        describe("Mixins", function() {
+            it ("should handle mixed in getInitialProps");
+
+            it ("should handle multiple mixed in getInitialProps");
+
+            it ("should handle mixed in getInitialState");
+
+            it ("should handle multiple mixed in getInitialState");
+        });
+
+
     });
 
     describe("Render", function() {
